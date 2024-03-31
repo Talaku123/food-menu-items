@@ -1,0 +1,186 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  background-color: rgb(255, 255, 255) !important;
+  width: 100%;
+}
+
+.container h1
+{
+  color: rgb(215, 178, 15) !important;
+  font-size: 6em;
+  font-weight: 800;
+  
+}
+
+.card
+
+ {
+  background-color: transparent !important;
+  box-shadow: 0 0 90px;
+  border: none !important;
+  justify-content: center;
+  min-height: 30vh;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+
+/*--------------- Flip Card Start Here  ---------------*/
+
+
+
+.flip-card {
+ 
+  border-radius: 100% !important;
+  cursor: pointer;
+  flex-wrap: wrap;
+  height: 200px;
+  /* perspective:10px;  */
+  margin-bottom: 530px;
+  width: 300px;
+  z-index: 999;
+}
+
+.flip-card-inner {
+
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  width: 100%;
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+ .flip-card-back {
+  background-color: rgb(1, 13, 6);
+  backface-visibility: hidden;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: 450%;
+  margin-top: -45em;
+  position: absolute;
+  transform: rotateY(180deg);
+  z-index: 9;
+
+}
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-front h2
+
+{
+  color: rgb(1, 14, 21);
+  font-size: 150px;
+  font-weight: 900;
+  flex-wrap: wrap;
+  position: fixed;
+  /* transform: translate(300px, -10px); */
+  text-shadow: -3px -5px 2px snow;
+  
+}
+
+
+/*------------ Second Card ------------- */
+
+.card-text img
+{
+  height: 250px;
+  width: 100%;
+}
+
+
+/*------------------ @media start --------- */
+
+
+@media screen and (max-width: 580px)
+
+{
+
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .container h1
+   {
+    font-size: 4em !important;
+  }
+  .flip-card
+  {
+    margin-bottom: 130px !important;
+  }
+  .flip-card-back
+  {
+    height: 1120%;
+    margin-top: 24em !important;
+  }
+  .flip-card-front h2
+  {
+    font-size: 60px;
+    transform: translate(-3px, -10px);
+   
+  }
+
+  .flip-card-back section > div > p
+  {
+    padding: 0 80px;
+  }
+
+}
+
+@media only screen and (max-width: 980px) {
+
+
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .container h1
+   {
+    font-size: 5em ;
+  }
+
+  .flip-card
+  {
+    margin-bottom: 230px ;
+  }
+
+  .flip-card-back
+  {
+    height: 1030%;
+    margin-top: -26em !important;
+  }
+
+  .flip-card-back section > div > p
+  {
+    padding: 0 80px;
+    
+  }
+
+  .flip-card-front h2
+  {
+    font-size: 70px !important;
+  }
+}
+
+
+
